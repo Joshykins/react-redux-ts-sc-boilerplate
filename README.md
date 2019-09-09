@@ -14,7 +14,7 @@ Will add in the near future, along with husky to run tests pre commit or somethi
 If you need a routing package I recommend [Reach Router](https://github.com/reach/router), but for my project needs it does not contain enough of the features I would like, so I am currently building my own.
 
 ## Styled Components
-I might move over my styled-components lib to fix some of the imports, since they're a bit wacky with the type definitions.
+Adding support when we go super tryhard and make a cli, use scss currently.
 
 ## Setup
 
@@ -29,14 +29,14 @@ npm install
 ## Scripts
 To start the dev server:
 ```
-yarn start:dev
+yarn start:dev || npm run start:dev
 ``` 
 To build the project:
 ```
-yarn build 
+yarn build || npm run build
 ``` 
 to lint: 
 ```
-yarn lint
+yarn lint || npm run lint
 ``` 
 
