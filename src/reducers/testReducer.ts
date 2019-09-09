@@ -1,5 +1,6 @@
 const initialState = {
   best: 'JAVA > C#',
+  count: 0,
 };
 
 export const testReducer = (state = initialState, action: any) => {
@@ -8,6 +9,12 @@ export const testReducer = (state = initialState, action: any) => {
       return {
         ...state,
         best: action.payload,
+      };
+    }
+    case 'TEST_COUNTER': {
+      return {
+        ...state,
+        count: state.count + 1,
       };
     }
     default:
