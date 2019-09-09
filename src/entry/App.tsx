@@ -1,6 +1,6 @@
 import { hot } from 'react-hot-loader/root';
 import * as React from 'react';
-import { Home } from '../pages/home/home';
+import Home from '../pages/home/home';
 
 const App = () => (
   <>
