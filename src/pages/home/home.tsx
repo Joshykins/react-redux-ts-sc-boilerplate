@@ -10,7 +10,7 @@ export interface TestProps {
   addTest: (payload: string) => void;
 }
 
-const Home = ({ test, addTest }: TestProps) => {
+const Home: React.FunctionComponent<TestProps> = ({ test, addTest }) => {
   React.useEffect(() => {
     setTimeout(() => {
       addTest('C++ > C#');
