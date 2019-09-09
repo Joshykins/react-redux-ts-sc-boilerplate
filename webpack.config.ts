@@ -1,5 +1,4 @@
 import { default as HtmlWebpackPlugin } from 'html-webpack-plugin';
-import typescriptPluginStyledComponents from 'typescript-plugin-styled-components';
 import { Configuration } from 'webpack';
 
 interface HexConfig extends Configuration {
@@ -8,28 +7,32 @@ interface HexConfig extends Configuration {
   };
 }
 
-const styledComponentsTransformer = typescriptPluginStyledComponents();
-
 const config: HexConfig = {
+  mode: "development",
   entry: './src/entry/index.tsx',
   output: {
-    filename: 'dist/bundle.js',
+    filename: 'bundle.js',
   },
   resolve: {
     extensions: ['.ts', '.tsx', '.js', '.jsx'],
   },
   devtool: 'source-map',
-  mode: 'development',
   module: {
     rules: [
       {
         test: /\.tsx?$/,
-        loader: 'awesome-typescript-loader',
-        options: {
-          getCustomTransformers: () => ({
-            before: [styledComponentsTransformer],
-          }),
-        },
+        loader: 'awesome-typescript-loader'
+      },
+      {
+        test: /\.s[ac]ss$/i,
+        use: [
+          // Creates `style` nodes from JS strings
+          'style-loader',
+          // Translates CSS into CommonJS
+          'css-loader',
+          // Compiles Sass to CSS
+          'sass-loader',
+        ],
       },
       {
         test: /\.(png|jpg|gif|svg)$/,

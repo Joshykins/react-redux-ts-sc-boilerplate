@@ -11,10 +11,10 @@ I'm personally using [Redux](https://github.com/reduxjs/redux) at the moment, so
 Will add in the near future, along with husky to run tests pre commit or something like that.
 
 ## Routing 
-If you need a routing package I recommend [Reach Router](https://github.com/reach/router), but for my project needs it does not contain enough of the features I would like, so I am currently building my own.
+[Reach Router](https://github.com/reach/router), 
 
-## Styled Components
-Adding support when we go super tryhard and make a cli, use scss currently.
+## Styling
+CSS / SCSS currently.
 
 ## Setup
 
