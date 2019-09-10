@@ -1,0 +1,14 @@
+.homePage {
+  max-width: 1080px;
+  width: 95%;
+  margin: 0 auto;
+  &Link {
+    color: rgb(150,150,150);
+    transition: 300ms;
+    text-decoration: none;
+    &:Hover {
+      transition: 300ms cubic-bezier(0.075, 0.82, 0.165, 1) ;
+      color:rgb(55,105,255);
+    }
+  }
+}

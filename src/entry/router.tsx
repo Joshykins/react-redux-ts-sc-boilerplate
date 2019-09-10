@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Router } from '@reach/router';
-import Home from '../pages/home';
+import Home from '../pages/home/home';
 
 const NotFound = React.lazy(()=>import('../components/404/404'));
 

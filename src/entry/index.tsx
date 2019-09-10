@@ -5,7 +5,7 @@ import { Provider } from 'react-redux';
 import App from './App';
 import { configureStore } from '../store/store';
 
-import './index.scss';
+import '../globals/globalStyling.scss';
 
 const store = configureStore();
 

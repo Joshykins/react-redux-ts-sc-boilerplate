@@ -4,15 +4,14 @@ import { connect } from 'react-redux';
 
 import { IStore } from '../../store/store';
 import { testAction, testCounter } from '../../actions';
-import { RouteComponentProps } from '@reach/router';
 
-export interface TestProps extends RouteComponentProps {
+export interface TestProps {
   test: { best: string; count: number };
   addTest: (payload: string) => void;
   testCount: () => void;
 } 
 
-const Home: React.FunctionComponent<TestProps> = ({
+const TestComponent: React.FunctionComponent<TestProps> = ({
   test,
   addTest,
   testCount,
@@ -55,4 +54,4 @@ const mapDispatchToProps = (dispatch: Dispatch) => {
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(Home);
+)(TestComponent);
