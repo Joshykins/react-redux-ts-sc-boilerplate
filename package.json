@@ -37,7 +37,7 @@
   },
   "scripts": {
     "build": "./node_modules/.bin/webpack",
-    "start:dev": "./node_modules/.bin/webpack-dev-server --hot --port=3000",
+    "start": "./node_modules/.bin/webpack-dev-server --hot --port=3000",
     "lint": "./node_modules/.bin/tslint --project tsconfig.json --config tslint.json"
   }
 }
