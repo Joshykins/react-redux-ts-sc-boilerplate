@@ -1,1 +1,1 @@
-export * from './counterExample.actions';
+export * from './counterExample';
