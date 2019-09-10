@@ -5,7 +5,7 @@ This contains enough to get a project up and running with ease, also contains ho
 If you want to load css, scss etc. you'll need to add the appropriate resolvers yourself, I mainly use [styled-components](https://www.styled-components.com/) now so I haven't added anything but an image resolver. 
 
 ## State management 
-I'm personally using [Redux](https://github.com/reduxjs/redux) at the moment, so I might add some basic boilerplate for that since it would save time, don't use [MobX](https://github.com/mobxjs/mobx) that much so probably wont do anything with that.
+This boilerpalte uses Redux for it's global state management. Reference the examples to see our pattern for developing with redux. 
 
 ## Unit testing
 Will add in the near future, along with husky to run tests pre commit or something like that.
