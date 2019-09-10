@@ -14,8 +14,8 @@ export function configureStore(initialState?: any): Store<IStore> {
   return store;
 }
 export interface IStore {
-  test: {
-    best: string;
+  counterExample: {
+    name: string;
     count: number;
   };
 }
