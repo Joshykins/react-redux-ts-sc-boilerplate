@@ -1,11 +1,14 @@
-import { CounterExampleActionsEnum, CounterExampleAction } from "../actions";
+import { CounterExampleActionsEnum, CounterExampleAction } from '../actions';
 
 const initialState = {
   name: 'Counting to infinity!',
   count: 0,
 };
 
-export const counterExampleReducer = (state = initialState, action: CounterExampleAction) => {
+export const counterExampleReducer = (
+  state = initialState,
+  action: CounterExampleAction
+) => {
   switch (action.type) {
     case CounterExampleActionsEnum.COUNTER_EXAMPLE_CHANGENAME: {
       return {
@@ -13,11 +16,16 @@ export const counterExampleReducer = (state = initialState, action: CounterExamp
         name: action.payload,
       };
     }
-    case CounterExampleActionsEnum.COUNTER_EXAMPLE_COUNT: {
-      console.log("ran");
+    case CounterExampleActionsEnum.COUNTER_EXAMPLE_ADD: {
       return {
         ...state,
         count: state.count + 1,
+      };
+    }
+    case CounterExampleActionsEnum.COUNTER_EXAMPLE_SUBTRACT: {
+      return {
+        ...state,
+        count: state.count - 1,
       };
     }
     default:
