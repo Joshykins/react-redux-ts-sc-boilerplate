@@ -1,10 +1,10 @@
 import { hot } from 'react-hot-loader/root';
 import * as React from 'react';
-import Home from '../pages/home/home';
+import { AppRouter } from './router';
 
 const App = () => (
   <>
-    <Home />
+    <AppRouter/>
   </>
 );
 
