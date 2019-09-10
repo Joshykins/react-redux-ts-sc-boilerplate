@@ -1,4 +1,4 @@
-# 🔥🔥 react-ts-sc boilerplate 🔥🔥
+# react-redux boilerplate
 This contains enough to get a project up and running with ease, also contains hot loading for [react](https://github.com/facebook/react). 
 
 ## Webpack
