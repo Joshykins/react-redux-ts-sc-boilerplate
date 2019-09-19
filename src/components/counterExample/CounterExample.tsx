@@ -1,35 +1,25 @@
 import React from 'react';
 import { Dispatch } from 'redux';
-import { connect } from 'react-redux';
-
+import { useSelector, useDispatch } from 'react-redux';
 import { IStore } from '../../store/store';
 import {
   counterExampleChangeName,
   counterExampleCount,
   CounterExampleActionPayload,
 } from '../../actions';
-
 import './counterExample.scss';
 
-export interface CounterProps {
-  counterExample: { name: string; count: number };
-  counterExampleChangeName: (payload: string) => void;
-  counterExampleCount: (payload: CounterExampleActionPayload) => void;
-}
-
-const CounterExampleComponent: React.FunctionComponent<CounterProps> = ({
-  counterExample,
-  counterExampleChangeName,
-  counterExampleCount,
-}) => {
+const CounterExampleComponent: React.FunctionComponent = () => {
+  const dispatch = useDispatch();
+  const counterExample = useSelector((state: IStore) => state.counterExample);
   let counterOptions = [
     `Counting to infinity!`,
     `Professional Adding Machine`,
-    `Subtraction is developed!.`,
+    `Subtraction is developed!`,
   ];
   const [state, setState] = React.useState<CounterExampleActionPayload>('add');
   React.useEffect(() => {
-    let int = setInterval(() => counterExampleCount(state), 1000);
+    let int = setInterval(() => dispatch(counterExampleCount(state)), 1000);
     return () => {
       clearInterval(int);
     };
@@ -42,8 +32,10 @@ const CounterExampleComponent: React.FunctionComponent<CounterProps> = ({
       <button
         className="counterExampleButton"
         onClick={() => {
-          counterExampleChangeName(
-            counterOptions[Math.floor(counterOptions.length * Math.random())]
+          dispatch(
+            counterExampleChangeName(
+              counterOptions[Math.floor(counterOptions.length * Math.random())]
+            )
           );
         }}
       >
@@ -71,25 +63,4 @@ const CounterExampleComponent: React.FunctionComponent<CounterProps> = ({
     </div>
   );
 };
-
-const mapStateToProps = (state: IStore) => {
-  return {
-    counterExample: state.counterExample,
-  };
-};
-
-const mapDispatchToProps = (dispatch: Dispatch) => {
-  return {
-    counterExampleChangeName: (payload: string) => {
-      dispatch(counterExampleChangeName(payload));
-    },
-    counterExampleCount: (payload: CounterExampleActionPayload) => {
-      dispatch(counterExampleCount(payload));
-    },
-  };
-};
-
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(CounterExampleComponent);
+export default CounterExampleComponent;
