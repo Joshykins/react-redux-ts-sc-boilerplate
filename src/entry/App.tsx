@@ -9,4 +9,4 @@ const App = () => (
 );
 
 /* ts complaining over having it directly in the app decl. */
-export default hot(App);
+export default App;
