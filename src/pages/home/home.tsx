@@ -1,10 +1,9 @@
 import React from 'react';
-import { RouteComponentProps } from '@reach/router';
 import './home.scss';
 import Test from '../../components/counterExample/CounterExample';
 import CounterExample from '../../components/counterExample/CounterExample';
 
-export interface HomeProps extends RouteComponentProps {}
+export interface HomeProps {}
 
 const Home: React.FunctionComponent<HomeProps> = () => {
   return (

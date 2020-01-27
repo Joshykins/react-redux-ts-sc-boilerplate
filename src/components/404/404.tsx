@@ -1,9 +1,9 @@
 import * as React from 'react';
-import { RouteComponentProps, Link } from '@reach/router';
+import { Link } from 'react-router-dom';
 
 
 
-const NotFound: React.FunctionComponent<RouteComponentProps> = () => {
+const NotFound: React.FunctionComponent = () => {
   return (
     <div>
       <h1>404, Page not found!</h1>
