@@ -26,8 +26,7 @@
     "typescript": "^3.4.3"
   },
   "scripts": {
-    "build": "./node_modules/.bin/webpack",
-    "start": "parcel src/entry/index.html",
-    "lint": "./node_modules/.bin/tslint --project tsconfig.json --config tslint.json"
+    "build": "parcel build src/entry/index.html",
+    "start": "parcel src/entry/index.html"
   }
 }
