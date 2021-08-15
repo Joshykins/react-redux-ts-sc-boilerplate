@@ -1,7 +1,4 @@
 node_modules/
-
-yarn.lock
-package-lock.json
 .awcache
 .idea
 .parcel-cache
