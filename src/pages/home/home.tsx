@@ -3,11 +3,16 @@ import './home.scss';
 import Test from '../../components/counterExample/CounterExample';
 import CounterExample from '../../components/counterExample/CounterExample';
 
+//@ts-ignore
+import fuck_parcel from 'url:../../images/fuck_parcel.png';
+
 export interface HomeProps {}
 
 const Home: React.FunctionComponent<HomeProps> = () => {
   return (
     <section className="homePage">
+      {"image work yeah"}
+      <img src={fuck_parcel} alt="" />
       <h1>
         Welcome to the homepage of{' '}
         <a className="homePageLink" href="https://github.com/Joshykins">

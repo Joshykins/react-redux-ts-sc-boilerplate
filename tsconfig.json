@@ -1,24 +1,15 @@
 {
   "compilerOptions": {
-    "target": "esnext",
-    "moduleResolution": "node",
-    "module": "commonjs",
-    "experimentalDecorators": true,
-    "strict": true,
+    "outDir": "./dist/",
+    "sourceMap": true,
+    "noImplicitAny": true,
     "esModuleInterop": true,
-    "jsx": "react",
-    "skipLibCheck": true,
-    "sourceMap": true
+    "module": "commonjs",
+    "target": "es5",
+    "lib": ["es5", "es6", "dom"],
+    "jsx": "react"
   },
-  "awesomeTypescriptLoaderOptions": {
-    "useBabel": true,
-    "useCache": true,
-    "babelCore": "@babel/core",
-    "babelOptions": {
-      "babelrc": false,
-      "presets": ["@babel/preset-react"],
-      "plugins": ["react-hot-loader/babel"]
-    }
-  },
-  "include": ["src"]
+  "include": [
+    "./src/**/*"
+  ]
 }
